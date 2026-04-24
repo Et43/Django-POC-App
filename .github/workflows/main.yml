@@ -1,0 +1,14 @@
+name: Issue Title Demo (Unsafe)
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Echo issue title (unsafe)
+        run: |
+          echo "Issue title is: ${{ github.event.issue.title }}"
